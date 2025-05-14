@@ -1,0 +1,22 @@
+﻿<Window x:Class="EasyImageEditor.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Easy Image Editor" Height="600" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+            <Button Content="Načíst obrázek" Click="LoadImage_Click" Margin="5"/>
+            <Button Content="Uložit obrázek" Click="SaveImage_Click" Margin="5"/>
+            <Button Content="Stupně šedi" Click="ToGrayscale_Click" Margin="5"/>
+            <Button Content="Sobel filtr" Click="SobelFilter_Click" Margin="5"/>
+            <Button Content="Otočit" Click="Rotate_Click" Margin="5"/>
+            <Button Content="Převrátit vodorovně" Click="FlipHorizontal_Click" Margin="5"/>
+            <Button Content="Převrátit svisle" Click="FlipVertical_Click" Margin="5"/>
+            <Button Content="Reset" Click="Reset_Click" Margin="5"/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1">
+            <Image x:Name="ImageViewer" Stretch="None"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
